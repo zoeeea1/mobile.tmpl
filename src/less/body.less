@@ -1,0 +1,116 @@
+@headerHeight:.88rem;
+@footerHeight:.98rem;
+@headerColor:#333;
+@footerColor:#333;
+@ToastFont:3.5vw;
+@ToastHeight:.5rem;
+@positon:fixed;
+html,body,.m-container,.m-wrap{
+    margin: 0;padding: 0;
+    height: 100%;
+}
+.m-header,.m-footer{
+    position:@positon;
+    background:#fff;
+    z-index: 100;
+}
+.m-header{
+    width: 100%;
+    height: @headerHeight;
+    top: 0;
+    max-width: 414px;
+    left: 50%;
+    margin-left: -(7.5rem/2)
+}
+.m-center{
+    background:#f5f5f5;
+    height: 100%;
+    position: relative;
+}
+.m-footer{
+    width: 100%;
+    height: @footerHeight;
+    bottom: 0;
+    max-width: 414px;
+    left: 50%;
+    margin-left: -(7.5rem/2)
+}
+
+.m-header-button{
+    -webkit-box-flex: .5;
+    -ms-flex: .5;
+    flex: .5;
+}
+.m-header{
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 0.33rem;
+    text-align: center;
+    white-space: nowrap;
+    color: @headerColor;
+}
+.m-header-title{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: inherit;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    font-weight: normal;
+    font-size: .32rem;
+    color: #060606;
+    letter-spacing: 0.0187rem;
+}   
+.header-is-left{
+    text-align: left;
+}
+.header-is-right{
+    text-align: right;
+}
+.m-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    color: @footerColor;
+}
+.m-center{
+    width: 100%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling : touch;
+}
+a{
+    color: @footerColor;
+}
+.m-header~.m-center{ 
+    border-top: @headerHeight solid transparent;
+}
+.m-footer~.m-center{
+    border-bottom: @footerHeight solid transparent;
+}
+
+
+.m-footer {
+    background: #ffffff;
+    padding: 0 1.25rem 0 1.221rem;
+    font-size: 0.2rem;
+    letter-spacing: 0.012rem;
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    img {
+        width: 0.5rem;
+    }
+    span {
+        color: #999999;
+    }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>H5模板</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="H5模板">
+    <meta name="keywords" content="H5模板">
+    <meta id="viewport" name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0,user-scalable=no">
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="app"> </div>
+    <!-- built files will be auto injected -->
+    <script>
+        function ready() {
+            var u = navigator.userAgent;
+            var winW = document.documentElement.clientWidth;
+            if (!!!u.match(/AppleWebKit.*Mobile.*/)) {
+                //非移动设备打开，414宽度居中
+                winW = 414;
+                document.getElementsByClassName('m-wrap')[0].style.width = '' + winW + 'px';
+            }
+            document.documentElement.style.fontSize = winW / 7.5 + 'px';
+        }
+        document.addEventListener("DOMContentLoaded", ready, false);
+        window.addEventListener("resize", ready, false);
+    </script>
+</body>
+
+</html>
